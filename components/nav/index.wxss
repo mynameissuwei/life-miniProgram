@@ -1,0 +1,12 @@
+/* components/nav/index.wxss */
+.container{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  color: red
+}
+
+.container image {
+  width: 30rpx;
+  height: 30rpx;
+}

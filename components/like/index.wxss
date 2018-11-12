@@ -1,0 +1,9 @@
+/* components/like/index.wxss */
+
+.container image{
+  width: 26rpx;
+  height: 23rpx;
+}
+.container text {
+  line-height: 30rpx;
+}

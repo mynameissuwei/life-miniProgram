@@ -1,0 +1,4 @@
+/* components/expoise/expoise.wxss */
+.container{
+  margin-left: 30rpx;
+}

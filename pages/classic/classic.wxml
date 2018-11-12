@@ -1,0 +1,9 @@
+<!--pages/classic/classic.wxml-->
+<view class='container'>
+  <view class='container-header'>
+    <v-like/>
+    <v-expoise index="{{classic.index}}"/>
+  </view>
+  <v-movie img="{{classic.image}}" title="{{classic.title}}" content="{{classic.content}}"/>
+  <v-nav title="{{classic.title}}"/>
+</view>

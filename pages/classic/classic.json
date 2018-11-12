@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "v-like": "/components/like/index",
+    "v-movie":"/components/movie/index",
+    "v-expoise":"/components/expoise/index",
+    "v-nav":"/components/nav/index"
+  }
+}

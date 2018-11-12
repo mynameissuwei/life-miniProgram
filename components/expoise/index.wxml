@@ -1,0 +1,9 @@
+<!--components/expoise/expoise.wxml-->
+<view class='container'>
+	<text>No.</text>
+	<text>{{_index}}</text>
+	<text>|</text>
+	<text>{{year}}</text>
+	<text>{{month}}</text>
+</view>
+
