@@ -1,4 +1,27 @@
 /* components/expoise/expoise.wxss */
 .container{
   margin-left: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 200rpx;
+  align-items: baseline;
+}
+.container .date{
+  display: flex;
+  flex-direction:column-reverse; 
+  font-size: 23rpx;
+  justify-content: flex-end;
+}
+.index{
+  font-size: 50rpx;
+}
+.year{
+  font-size:18rpx
+}
+.month{
+  font-size:14rpx
+}
+.bar{
+  border:1px solid gray;
+  height: 35rpx;
 }

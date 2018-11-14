@@ -18,10 +18,11 @@ const movie = (web) => {
 class http {
     req(arg) {
         wx.request({
-            url:movie(arg),
+            url:'http://bl.7yue.pro/v1' + arg.url,
             get:arg.method,
             header:{
-                "content-type": "json"
+                "content-type": "json",
+                "appkey":"AbhC31IG7ruCDp57"
             },
             success:(res) => {
                     let code = res.statusCode

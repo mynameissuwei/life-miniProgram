@@ -7,6 +7,6 @@
 }
 
 .container image {
-  width: 30rpx;
-  height: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
 }

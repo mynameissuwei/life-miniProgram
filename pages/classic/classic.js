@@ -9,8 +9,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic:null
+    classic:null,
+    latest:true,
+    oldest:false
   },
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -21,6 +25,26 @@ Page({
         this.setData({
           classic:res.data
         })
+    })
+  },
+
+  onLeft:function() {
+    let index = this.data.classic.index + 2
+    console.log(index)
+    suwei.getLastData(index,(res)=>{
+      this.setData({
+        classic:res.data
+      })
+    })
+  },
+
+  onRight:function() {
+    let index = this.data.classic.index - 2
+    console.log(index)
+    suwei.getNextData(index,(res) => {
+      this.setData({
+        classic:res.data
+      })
     })
   },
 

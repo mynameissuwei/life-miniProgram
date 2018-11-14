@@ -5,5 +5,5 @@
     <v-expoise index="{{classic.index}}"/>
   </view>
   <v-movie img="{{classic.image}}" title="{{classic.title}}" content="{{classic.content}}"/>
-  <v-nav title="{{classic.title}}"/>
+  <v-nav title="{{classic.title}}" lastest="{{latest}}" oldest="{{oldest}}" bind:left="onLeft" bind:right="onRight"/>
 </view>

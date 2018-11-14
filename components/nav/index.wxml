@@ -1,6 +1,6 @@
 <!--components/nav/index.wxml-->
 <view class="container">
-  <image src="{{left}}"></image>
+  <image src="{{lastest?disleft:left}}" bindtap='onLeft'></image>
   <text>{{title}}</text>
-  <image src="{{right}}"></image>
+  <image src="{{oldest?disright:right}}" bindtap='onRight'></image>
 </view>

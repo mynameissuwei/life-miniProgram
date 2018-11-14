@@ -6,6 +6,12 @@ Component({
   properties: {
     title:{
       type:String
+    },
+    lastest:{
+      type:Boolean
+    },
+    oldest:{
+      type:Boolean
     }
   },
 
@@ -14,13 +20,22 @@ Component({
    */
   data: {
     left:'images/last.png',
-    right:'images/next.png'
+    right:'images/next.png',
+    disleft:'images/dislast.png',
+    disright:'images/disnext.png'
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    onLeft:function(e){
+      if(!this.properties.lastest) {
+        this.triggerEvent('left', {}, {})
+      }
+    },
+    onRight:function(e){
+      this.triggerEvent('right',{},{})
+    }
   }
 })
