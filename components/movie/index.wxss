@@ -1,27 +1,3 @@
 /* components/movie/index.wxss */
-.container {
-  display: flex;
-  flex-direction:column;
-  margin-top:20rpx;
-  justify-content: space-between;
-  height: 680rpx;
-  align-items: center;
-}
-
-.container image{
-  width: 747rpx;
-}
-
-.container text {
-  width:500rpx;
-}
-
-.movie{
-  position: relative;
-  top:-249rpx;
-  width:40rpx;
-  height: 120rpx;
-  left:50rpx;
-}
-
+@import '../common.wxss'
 

@@ -1,4 +1,4 @@
-// components/music/index.js
+// components/book/index.js
 import behavior from '../Behavior'
 
 Component({
@@ -6,9 +6,9 @@ Component({
    * 组件的属性列表
    */
   behaviors:[behavior],
-
+  
   properties: {
-    
+
   },
 
   /**

@@ -8,10 +8,11 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
+  data:{
     classic:null,
     latest:true,
-    oldest:false
+    oldest:false,
+    hidden:true
   },
 
 
@@ -20,8 +21,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(suwei.getStorageData())
     suwei.getMovieData((res) => {
-        console.log(res.data)
         this.setData({
           classic:res.data
         })
@@ -29,23 +30,50 @@ Page({
   },
 
   onLeft:function() {
-    let index = this.data.classic.index + 2
-    console.log(index)
-    suwei.getLastData(index,(res)=>{
-      this.setData({
-        classic:res.data
+    let index = this.data.classic.index
+    let latest = this.data._index
+    let key = suwei.getKey(index + 1)
+    let classic = wx.getStorageSync(key)
+    if(!classic) {
+      suwei.getNextData(index,(res)=>{
+        this.setData({
+          classic:res.data,
+          oldest:suwei.isFirst(index + 1),
+          latest:suwei.isLatest(index + 1)
+        })
+        wx.setStorageSync(key,res.data)
       })
-    })
+    } else {
+      this.setData({
+        classic,
+        oldest:suwei.isFirst(index + 1),
+        latest:suwei.isLatest(index + 1)
+      })
+    }
+
   },
 
   onRight:function() {
-    let index = this.data.classic.index - 2
-    console.log(index)
-    suwei.getNextData(index,(res) => {
-      this.setData({
-        classic:res.data
+    let index = this.data.classic.index
+    let latest = this.data._index
+    let key = suwei.getKey(index - 1)
+    let classic = wx.getStorageSync(key)
+    if(!classic){
+      suwei.getLastData(index,(res) => {
+        this.setData({
+          classic:res.data,
+          oldest:suwei.isFirst(index - 1),
+          latest:suwei.isLatest(index - 1)
+        })
+        wx.setStorageSync(key,res.data)
       })
-    })
+    }else{
+      this.setData({
+        classic,
+        oldest:suwei.isFirst(index - 1),
+        latest:suwei.isLatest(index - 1)
+      })
+    }
   },
 
   /**

@@ -1,2 +1,7 @@
 <!--components/music/index.wxml-->
-<text>components/music/index.wxml</text>
+<view class='container'>
+  <image src="{{img}}"></image>
+  <text>{{content}}></text>
+</view>
+<image src="images/music.png" class='movie' hidden="{{hidden}}"></image>
+

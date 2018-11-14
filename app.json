@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/classic/classic"
+    "pages/classic/classic",
+    "components/book/index"
   ],
   "window": {
     "navigationBarTitleText": "啦啦啦",

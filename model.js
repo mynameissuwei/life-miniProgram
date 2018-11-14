@@ -6,7 +6,10 @@ class model extends http {
         this.req({
             url:'/classic/latest',
             method:"GET",
-            success:(res) => callBack(res)
+            success:(res) => {
+              callBack(res)
+              this.setStorageData(res.data.index)
+            }
         })
     }
 
@@ -22,8 +25,31 @@ class model extends http {
       this.req({
         url:'/classic/' + index + '/previous',
         method:'GET',
-        success:(res) => callBack(res)
+        success:(res) => {
+            callBack(res)
+        }
       })
+    }
+
+    isLatest(index) {
+        let latest = this.getStorageData()
+        return index === latest?true:false
+    }
+
+    isFirst(index) {
+        return index === 1?true:false
+    }
+
+    setStorageData(index) {
+        wx.setStorageSync('index',index)
+    }
+
+    getStorageData() {
+        return wx.getStorageSync('index')
+    }
+
+    getKey(index) {
+        return 'classic' + index
     }
     
 }

@@ -1,8 +1,12 @@
 // components/movie/index.js
+import behavior from '../Behavior'
+
 Component({
   /**
    * 组件的属性列表
    */
+  behaviors:[behavior],
+  
   properties: {
     img:{
       type:'String'  

@@ -4,6 +4,8 @@
     <v-like/>
     <v-expoise index="{{classic.index}}"/>
   </view>
-  <v-movie img="{{classic.image}}" title="{{classic.title}}" content="{{classic.content}}"/>
+  <v-movie wx:if="{{classic.type === 100?true:false}}" img="{{classic.image}}" title="{{classic.title}}" content="{{classic.content}}"/>
+  <v-book wx:if="{{classic.type === 300?true:false}}" img="{{classic.image}}" content="{{classic.content}}"></v-book>
+  <v-music wx:if="{{classic.type === 200?true:false}}" img="{{classic.image}}" content="{{classic.content}}"></v-music>
   <v-nav title="{{classic.title}}" lastest="{{latest}}" oldest="{{oldest}}" bind:left="onLeft" bind:right="onRight"/>
 </view>

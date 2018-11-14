@@ -35,7 +35,9 @@ Component({
       }
     },
     onRight:function(e){
-      this.triggerEvent('right',{},{})
+      if(!this.properties.oldest) {
+        this.triggerEvent('right',{},{})
+      }
     }
   }
 })
