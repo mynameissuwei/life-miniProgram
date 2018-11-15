@@ -1,7 +1,8 @@
 <!--components/music/index.wxml-->
 <view class='container'>
-  <image src="{{img}}"></image>
+  <image src="{{img}}" class="{{init?'':'rotation'}}"></image>
   <text>{{content}}></text>
 </view>
-<image src="images/music.png" class='movie' hidden="{{hidden}}"></image>
+<image src="images/music.png" class='movie'></image>
+<image src="{{init?play:pause}}" class='music' bind:tap='onPlay'></image>
 

@@ -1,2 +1,55 @@
 /* components/music/index.wxss */
-@import '../common.wxss'
+.container {
+  display: flex;
+  flex-direction:column;
+  margin-top:20rpx;
+  justify-content: space-between;
+  height: 680rpx;
+  align-items: center;
+}
+
+.container image{
+  width: 500rpx;
+  border-radius: 50%;
+}
+
+.container text {
+  width:500rpx;
+}
+
+.movie{
+  position: relative;
+  top:-249rpx;
+  width:40rpx;
+  height: 120rpx;
+  left:50rpx;
+}
+
+.music{
+  width:150rpx;
+  height: 150rpx;
+  position: relative;
+  bottom:500rpx;
+  left:260rpx;
+}
+
+.rotation {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12s linear infinite;
+  -webkit-animation: rotation 12s linear infinite;
+  -o-animation: rotation 12s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+

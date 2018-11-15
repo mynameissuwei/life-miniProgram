@@ -22,3 +22,13 @@
   height: 120rpx;
   left:50rpx;
 }
+
+.music{
+  width:150rpx;
+  height: 150rpx;
+  position: relative;
+  bottom:500rpx;
+  left:260rpx;
+}
+
+

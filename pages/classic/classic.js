@@ -21,12 +21,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(suwei.getStorageData())
     suwei.getMovieData((res) => {
         this.setData({
           classic:res.data
         })
     })
+    console.log(this.data.classic)
   },
 
   onLeft:function() {
