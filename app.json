@@ -1,11 +1,39 @@
 {
   "pages": [
     "pages/classic/classic",
-    "components/book/index"
+    "components/book/index",
+    "pages/classic/book/index",
+    "pages/classic/travel/index"
   ],
   "window": {
     "navigationBarTitleText": "啦啦啦",
     "navigationBarStyle": "#fff",
     "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color":"white",
+    "borderStyle":"white",
+    "backgroundColor":"white",
+    "selectedColor":"gray",
+    "list": [
+      {
+        "pagePath": "pages/classic/classic",
+        "text": "Movie",
+        "iconPath":"images/my.png",
+        "selectedIconPath":"images/my@highlight.png"
+      },
+      {
+        "pagePath": "pages/classic/book/index",
+        "text": "Book",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/classic/travel/index",
+        "text": "Travel",
+        "iconPath": "images/classic.png",
+        "selectedIconPath": "images/classic@highlight.png"
+      }
+    ]
   }
 }

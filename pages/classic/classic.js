@@ -26,7 +26,6 @@ Page({
           classic:res.data
         })
     })
-    console.log(this.data.classic)
   },
 
   onLeft:function() {
