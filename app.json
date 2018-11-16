@@ -1,8 +1,7 @@
 {
   "pages": [
+    "pages/classic/library/index",
     "pages/classic/classic",
-    "components/book/index",
-    "pages/classic/book/index",
     "pages/classic/travel/index"
   ],
   "window": {
@@ -11,9 +10,9 @@
     "backgroundColor": "#fff"
   },
   "tabBar": {
-    "color":"white",
+    "color":"black",
     "borderStyle":"white",
-    "backgroundColor":"white",
+    "backgroundColor":"black",
     "selectedColor":"gray",
     "list": [
       {
@@ -23,7 +22,7 @@
         "selectedIconPath":"images/my@highlight.png"
       },
       {
-        "pagePath": "pages/classic/book/index",
+        "pagePath": "pages/classic/library/index",
         "text": "Book",
         "iconPath": "images/book.png",
         "selectedIconPath": "images/book@highlight.png"

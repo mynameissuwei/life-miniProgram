@@ -1,0 +1,36 @@
+.container .header {
+  display: flex;
+  width:100%;
+  height: 170rpx;
+  justify-content: center;
+}
+.container .header input {
+  width: 80%;
+  height: 80rpx;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color:white;
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.container .header image {
+  width:30rpx;
+  height:30rpx;
+  position: relative;
+  left: 160rpx;
+  bottom: 59rpx;
+  z-index: 100;
+}
+.container .sub-container {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height: 500rpx;
+  border: 1px solid black;
+}
+.container .sub-container image {
+  width: 90rpx;
+  height: 30rpx;
+}
+

@@ -3,4 +3,4 @@
   <image src="{{img}}"></image>
   <text>{{content}}></text>
 </view>
-<image src="images/book.png" class='movie' hidden="{{hidden}}"></image>
+<image src="images/book.png" class='movie'></image>

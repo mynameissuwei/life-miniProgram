@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="header">
+    <input type="text" placeholder="Search Book List" auto-focus />
+    <image src='/images/search.png'></image>
+  </view>
+  <view class="sub-container">
+    <image src="/images/quality.png"></image>
+    <v-library></v-library>
+  </view>  
+</view>
+
