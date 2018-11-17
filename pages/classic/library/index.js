@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    data:"ok"
   },
 
   /**
@@ -17,7 +17,12 @@ Page({
    */
   onLoad: function (options) {
     const data = book.getData();
-    data.then(res => console.log(res))
+    data.then(res => {
+      this.setData({
+        data:res.data
+      })
+      console.log(this.data.data)
+    })
   },
 
   /**

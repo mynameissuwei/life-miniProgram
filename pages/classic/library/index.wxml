@@ -3,9 +3,10 @@
     <input type="text" placeholder="Search Book List" auto-focus />
     <image src='/images/search.png'></image>
   </view>
-  <view class="sub-container">
-    <image src="/images/quality.png"></image>
-    <v-library></v-library>
-  </view>  
+  <image src="/images/quality.png" class='quality'></image>
+  <view class="library">
+		<block wx:key='id' wx:for='{{data}}'>
+			<v-library item='{{item}}' class='lib'/>
+		</block>
+  </view>
 </view>
-

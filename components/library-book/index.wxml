@@ -1,1 +1,8 @@
 <!--components/library-book/index.wxml-->
+<view class="container">
+  <image  src="{{item.image}}"></image>
+  <view class="description">
+    <text class='title'>{{item.title}}</text>
+    <text class='author'>{{item.author}}</text>
+  </view>
+</view>

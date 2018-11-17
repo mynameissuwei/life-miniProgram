@@ -8,3 +8,9 @@ async await ES2017 小程序 不支持
 微信小程序tabBar面积缩小 很难点击
 小程序的组件不能改名字？
 using components
+微信小程序布局问题
+-- 掌握了flex属性 还有css分号问题 记得解决完问题 
+去买瓶水喝。
+flex属性没有掌握完全 快自闭了  先用width解决宽度问题 
+flex问题等看视频再进行研究
+question 不要对组件加上class 并且在这个class上面写上样式。
