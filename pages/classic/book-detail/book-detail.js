@@ -9,27 +9,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    info:'',
+    comment:'',
+    status:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+    
+    const bid = options.bid
 
-    book.getData().then((res) => {
-      console.log(res)
+    book.getDetail(bid).then((res) => {
+      this.setData({
+        info:res.data
+      })
     })
 
-    
+    book.getComment(bid).then((res) => {
+      console.log(res.data.comments)
+      this.setData({
+        comment:res.data.comments
+      })
+    })
 
+    book.getLikeStatus(bid).then((res) => {
+      this.setData({
+        status:res
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

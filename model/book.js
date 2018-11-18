@@ -8,6 +8,12 @@ class Book extends http1 {
     });
   }
 
+  getDetail(bid) {
+    return this.getModel({
+      url:`/book/${bid}/detail`
+    })
+  }
+
   getComment(bid) {
     return this.getModel({
       url: `/book/${bid}/short_comment`

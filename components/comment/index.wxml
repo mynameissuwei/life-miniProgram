@@ -1,0 +1,7 @@
+<!--components/comment/index.wxml-->
+<view class="container">
+  <text>{{item.content}}</text>
+  <slot name='after'>
+    
+  </slot>
+</view>

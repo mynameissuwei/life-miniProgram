@@ -1,8 +1,10 @@
 .container .header {
   display: flex;
   width:100%;
+  position:fixed;
   height: 170rpx;
   justify-content: center;
+  z-index:999;
 }
 .container .header input {
   width: 80%;
@@ -22,11 +24,13 @@
   left: 160rpx;
   bottom: 59rpx;
   z-index: 100;
+  padding-top:100rpx;
 }
 .quality {
   margin-left: 300rpx;
   width: 100rpx;
   height: 40rpx;
+  margin-top:140rpx;
 }
 .library {
   display: flex;
@@ -35,6 +39,7 @@
   height: 100%;
   width: 100%;
   background-color: #f5f5f5;
+  padding-top:10rpx;
 }
 /*.lib {
   width: 300px;

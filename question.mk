@@ -14,3 +14,5 @@ using components
 flex属性没有掌握完全 快自闭了  先用width解决宽度问题 
 flex问题等看视频再进行研究
 question 不要对组件加上class 并且在这个class上面写上样式。
+外部样式优先级 使用样式提升 
+三种 属性传值 slot 外部样式

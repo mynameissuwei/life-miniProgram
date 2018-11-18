@@ -1,2 +1,51 @@
-<!--pages/classic/book-detail/book-detail.wxml-->
-<text>pages/classic/book-detail/book-detail.wxml</text>
+<view class="container">
+  <view class='interval'></view>
+  <view class="sub-container">
+    <image src='{{info.image}}'></image>
+    <text class='title'>{{info.title}}</text>
+    <text class='author'>{{info.author}}</text>
+  </view>
+  <view class='interval'></view>
+
+  <view class='sub-container'>
+    <view class='short'>SHORT COMMENT</view>
+    <view class='sub-comment'>
+      <block wx:for='{{comment}}' wx:key="">
+        <v-tag item="{{item}}" class='tag'>
+          <view slot='after' class='tag-comment'>{{'+' + item.nums}}</view>
+        </v-tag>
+      </block>
+    </view>
+  </view>
+
+  <view class='interval'></view>
+
+  <view class='sub-container'>
+    <text class="headline">内容简介</text>
+    <text class='content'>{{info.summary}}</text>
+  </view>
+
+  <view class='interval'></view>
+
+  <view class="sub-container">
+    <text class="headline">书本信息</text>
+    <view class="detail-contaner">
+      <view class="vertical">
+        <text class="description">出版社</text>
+        <text class="description">出版年</text>
+        <text class="description">页数</text>
+        <text class="description">定价</text>
+        <text class="description">装帧</text>
+      </view>
+      <view class="vertical">
+        <text class="">{{info.publisher}}</text>
+        <text class="">{{info.pubdate}}</text>
+        <text class="">{{info.pages}}</text>
+        <text class="">{{info.price}}</text>
+        <text class="">{{info.binding}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
