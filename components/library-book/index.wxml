@@ -1,5 +1,5 @@
 <!--components/library-book/index.wxml-->
-<view class="container">
+<view class="container" bindtap='onshow'>
   <image  src="{{item.image}}"></image>
   <view class="description">
     <text class='title'>{{item.title}}</text>

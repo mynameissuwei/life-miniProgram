@@ -2,7 +2,8 @@
   "pages": [
     "pages/classic/library/index",
     "pages/classic/classic",
-    "pages/classic/travel/index"
+    "pages/classic/travel/index",
+    "pages/classic/book-detail/book-detail"
   ],
   "window": {
     "navigationBarTitleText": "啦啦啦",
@@ -10,16 +11,16 @@
     "backgroundColor": "#fff"
   },
   "tabBar": {
-    "color":"black",
-    "borderStyle":"white",
-    "backgroundColor":"black",
-    "selectedColor":"gray",
+    "color": "black",
+    "borderStyle": "white",
+    "backgroundColor": "black",
+    "selectedColor": "gray",
     "list": [
       {
         "pagePath": "pages/classic/classic",
         "text": "Movie",
-        "iconPath":"images/my.png",
-        "selectedIconPath":"images/my@highlight.png"
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my@highlight.png"
       },
       {
         "pagePath": "pages/classic/library/index",

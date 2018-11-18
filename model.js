@@ -13,6 +13,7 @@ class model extends http {
         })
     }
 
+
     getNextData(index,callBack) {
         this.req({
             url:'/classic/' + index + '/next',

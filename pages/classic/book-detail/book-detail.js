@@ -1,7 +1,7 @@
-// pages/classic/book/index.js
+// pages/classic/book-detail/book-detail.js
 import Book from '../../../model/book'
 
-const book = new Book()
+var book = new Book()
 
 Page({
 
@@ -9,19 +9,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:"ok"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const data = book.getData();
-    data.then(res => {
-      this.setData({
-        data:res.data
-      })
+
+    book.getData().then((res) => {
+      console.log(res)
     })
+
+    
+
   },
 
   /**
