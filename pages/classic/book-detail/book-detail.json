@@ -1,5 +1,6 @@
 {
   "usingComponents":{
-    "v-tag":"/components/comment/index"
+    "v-tag":"/components/comment/index",
+    "v-like": "/components/like/index"
   }
 }

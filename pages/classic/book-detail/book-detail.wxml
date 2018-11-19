@@ -1,3 +1,4 @@
+
 <view class="container">
   <view class='interval'></view>
   <view class="sub-container">
@@ -22,7 +23,7 @@
 
   <view class='sub-container'>
     <text class="headline">内容简介</text>
-    <text class='content'>{{info.summary}}</text>
+    <text class='content' decode="{{true}}">{{util.format(info.summary)}}</text>
   </view>
 
   <view class='interval'></view>
@@ -47,5 +48,27 @@
     </view>
   </view>
 
+  <view class='sub-container'>
+    <text>input comment</text>
+    <v-like></v-like>
+  </view>
 </view>
+
+<wxs module="util">
+  var limit = function(array, length) {
+    return array.slice(0, length)
+  }
+  var format = function(text){
+    if(!text){
+      return
+    }
+    var reg = getRegExp('\\\\n','g')
+    var text = text.replace(reg,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+    return text
+  }
+  module.exports = {
+    limit: limit,
+    format:format
+  }
+</wxs>
 
