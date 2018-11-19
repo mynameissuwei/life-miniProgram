@@ -48,10 +48,25 @@
     </view>
   </view>
 
-  <view class='sub-container'>
-    <text>input comment</text>
+  <view class='post-container' wx:if='{{!posting}}'>
+    <text class='post-fake' bind:tap='onCancel'>input comment</text>
     <v-like></v-like>
+    <image src='/images/share.png'/>
   </view>
+
+  <view wx:if="{{posting}}" class="posting-container">
+    <view class="post-header">
+      <text class='confirm'>confirm</text>
+      <text class="cancel" bind:tap="onCancel">cancel</text>
+    </view>
+    <view class='post-comment'>
+    
+    </view>
+    <view class="section">
+      <input placeholder='input your comment' auto-focus/>
+    </view>
+  </view>
+
 </view>
 
 <wxs module="util">

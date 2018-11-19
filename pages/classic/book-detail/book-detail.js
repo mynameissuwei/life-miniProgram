@@ -11,7 +11,8 @@ Page({
   data: {
     info:'',
     comment:'',
-    status:''
+    status:'',
+    posting:true
   },
 
   /**
@@ -39,6 +40,12 @@ Page({
       this.setData({
         status:res
       })
+    })
+  },
+
+  onCancel:function () {
+    this.setData({
+      posting:false
     })
   },
 
