@@ -23,6 +23,8 @@ Page({
     wx.showLoading()
 
     const bid = options.bid
+    console.log(bid)
+    const comment = '我'
     const bookDetail = book.getDetail(bid)
     const bookComment = book.getComment(bid)
     const bookStatus = book.getLikeStatus(bid)
@@ -35,6 +37,7 @@ Page({
       })
       wx.hideLoading()
     })
+
 
     // book.getDetail(bid).then((res) => {
     //   this.setData({
@@ -58,6 +61,12 @@ Page({
   onCancel:function () {
     this.setData({
       posting:false
+    })
+  },
+
+  cancel:function () {
+    this.setData({
+      posting:true
     })
   },
 

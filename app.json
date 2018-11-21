@@ -3,8 +3,7 @@
     "pages/classic/library/index",
     "pages/classic/classic",
     "pages/classic/travel/index",
-    "pages/classic/book-detail/book-detail",
-    "components/comment/index"
+    "pages/classic/book-detail/book-detail"
   ],
   "window": {
     "navigationBarTitleText": "啦啦啦",

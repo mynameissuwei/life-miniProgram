@@ -26,6 +26,17 @@ class Book extends http1 {
     })
   }
 
+  addComment(bid,comment) {
+    return this.getModel({
+      url:'/book/add/short_comment',
+      data:{
+        book_id:bid,
+        content:comment
+      },
+      method:'POST'
+    })
+  }
+
 }
 
 export default Book;

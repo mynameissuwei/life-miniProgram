@@ -136,6 +136,7 @@
   color: black;
 }
 .post-comment {
+  padding-top:20rpx;
   height: 60%;
 }
 .section input {

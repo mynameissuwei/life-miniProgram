@@ -2,22 +2,22 @@ class http1 {
 
   getModel({url,data = {},method = 'GET'}) {
     return new Promise((resolve,reject) => {
-      this.req(url,data = {},method = 'GET',resolve,reject)
+      this.req(url,data,method,resolve,reject)
     })
   }
 
   req(url,data,method,resolve,reject) {
     wx.request({
         url:'http://bl.7yue.pro/v1' + url,
-        get:method,
-        data,
+        method:method,
+        data:data,
         header:{
             "content-type": "json",
             "appkey":"AbhC31IG7ruCDp57"
         },
         success:(res) => {
                 let code = res.statusCode
-                if(code < 350) {
+                if(code < 400) {  
                   resolve(res);  
                 } else {
                   reject();

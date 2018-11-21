@@ -60,14 +60,17 @@
   <view wx:if="{{!posting}}" class="posting-container">
     <view class="post-header">
       <text class='confirm'>confirm</text>
-      <text class="cancel" bind:tap="onCancel">cancel</text>
+      <text class="cancel" bind:tap="cancel">cancel</text>
     </view>
     <view class='post-comment'>
-    
+      <block wx:for='{{util.limit(comment,3)}}' wx:key="">
+        <v-tag item="{{item}}" class='tag'>
+          <view slot='after' class='tag-comment'>{{'+' + item.nums}}</view>
+        </v-tag>
+      </block>
     </view>
-    <view class="section">
-      <input placeholder='input your comment' auto-focus/>
-    </view>
+    <input class="post" placeholder='短评最多12个字' bindconfirm="onPost">
+    </input>
   </view>
 
 </view>
