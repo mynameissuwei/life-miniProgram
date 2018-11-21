@@ -20,27 +20,39 @@ Page({
    */
   onLoad: function (options) {
     
-    
+    wx.showLoading()
+
     const bid = options.bid
+    const bookDetail = book.getDetail(bid)
+    const bookComment = book.getComment(bid)
+    const bookStatus = book.getLikeStatus(bid)
 
-    book.getDetail(bid).then((res) => {
+    Promise.all([bookDetail,bookComment,bookStatus]).then(res => {
       this.setData({
-        info:res.data
+        info:res[0].data,
+        comment:res[1].data.comments,
+        status:res[2]
       })
+      wx.hideLoading()
     })
 
-    book.getComment(bid).then((res) => {
-      console.log(res.data.comments)
-      this.setData({
-        comment:res.data.comments
-      })
-    })
+    // book.getDetail(bid).then((res) => {
+    //   this.setData({
+    //     info:res.data
+    //   })
+    // })
 
-    book.getLikeStatus(bid).then((res) => {
-      this.setData({
-        status:res
-      })
-    })
+    // book.getComment(bid).then((res) => {
+    //   this.setData({
+    //     comment:res.data.comments
+    //   })
+    // })
+
+    // book.getLikeStatus(bid).then((res) => {
+    //   this.setData({
+    //     status:res
+    //   })
+    // })
   },
 
   onCancel:function () {

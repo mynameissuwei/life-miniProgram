@@ -133,7 +133,7 @@
 }
 .posting-container .confirm {
   margin-right: 540rpx;
-  color: black'
+  color: black;
 }
 .post-comment {
   height: 60%;
