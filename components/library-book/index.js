@@ -22,7 +22,6 @@ Component({
   methods: {
     onshow:function(e) {
       const bid = this.properties.item.id
-      console.log(bid)
       wx.navigateTo({
         url: `/pages/classic/book-detail/book-detail?bid=${bid}`,
       })

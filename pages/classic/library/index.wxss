@@ -1,31 +1,37 @@
-.container .header {
-  display: flex;
-  width:100%;
-  position:fixed;
-  height: 170rpx;
+.box{
+  display:flex; 
+  flex-direction: row;
   justify-content: center;
-  z-index:999;
-}
-.container .header input {
-  width: 80%;
-  height: 80rpx;
+  align-items: center; 
   border-radius: 50px;
-  border: 1px solid black;
-  background-color:white;
-  margin-top: 40rpx;
-  text-align: center;
   background-color: #f5f5f5;
+  height: 34px;
+  width:700rpx;
+  color:#999999;
 }
 
-.container .header image {
-  width:30rpx;
-  height:30rpx;
-  position: relative;
-  left: 160rpx;
-  bottom: 59rpx;
-  z-index: 100;
-  padding-top:100rpx;
+.header{
+  position: fixed; 
+  background-color: #ffffff;
+  height:100rpx;
+  width:100%;
+  border-top:1px solid #f5f5f5;
+  border-bottom:1px solid #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow:0 0 3px 0 #e3e3e3; 
+  z-index: 99;
 }
+
+.box image{
+  margin-right:10px;
+  width:14px;
+  height:14px;
+  margin-bottom:-2px;
+}
+
 .quality {
   margin-left: 300rpx;
   width: 100rpx;
@@ -35,14 +41,24 @@
 .library {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   background-color: #f5f5f5;
-  padding-top:10rpx;
+  flex-direction: row;
 }
-/*.lib {
-  width: 300px;
-  height: 300px;
-  border:1px solid black;
+.lib:nth-child(odd) {
+  margin-left:84rpx;
+}
+.lib:nth-child(even) {
+  margin-right:84rpx;
+}
+/*.books-container{
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 90rpx 0 90rpx;
+  justify-content: space-between;
 }*/
+

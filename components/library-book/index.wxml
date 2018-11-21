@@ -1,8 +1,8 @@
-<!--components/library-book/index.wxml-->
 <view class="container" bindtap='onshow'>
-  <image  src="{{item.image}}"></image>
+  <image  src="{{item.image||item.img}}"></image>
   <view class="description">
     <text class='title'>{{item.title}}</text>
     <text class='author'>{{item.author}}</text>
+    <text class='lik_comment'>{{item.fav_nums}} 喜欢 . 68 短评</text>
   </view>
 </view>

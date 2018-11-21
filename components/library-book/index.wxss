@@ -5,7 +5,7 @@
   position: relative; 
   box-shadow:2px 2px 3px #e3e3e3;
   flex-direction: column;
-  width:300rpx;
+  width:240rpx;
   height:360rpx;
   /* padding:0 90rpx 0 90rpx;  */
 }
@@ -13,7 +13,7 @@
 .description{
   padding:5rpx 10rpx 8rpx 15rpx;  
   background-color: #ffffff;
-  width:300rpx;
+  width:216rpx;
   /* height:100rpx; */
   position:absolute;  
   bottom: 0;
@@ -29,12 +29,13 @@
   text-overflow:ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: black;
 }
 
 .author{
   font-size:20rpx;
   color:#999999;
-  margin-top:-5rpx;
+  margin-top:5rpx;
   margin-bottom: 10rpx;
   text-overflow:ellipsis;
   white-space: nowrap;
@@ -47,4 +48,18 @@
   border-radius: 2px;
 }
 
+.foot{
+  /* margin-top:3rpx; */
+  font-size:20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
+.footer{
+  color:#666666;
+}
+
+.lik_comment {
+  color: black;
+}

@@ -1,11 +1,14 @@
 
 <view class="container">
+
   <view class='interval'></view>
+
   <view class="sub-container">
     <image src='{{info.image}}'></image>
     <text class='title'>{{info.title}}</text>
     <text class='author'>{{info.author}}</text>
   </view>
+  
   <view class='interval'></view>
 
   <view class='sub-container'>

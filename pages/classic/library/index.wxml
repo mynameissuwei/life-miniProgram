@@ -1,12 +1,20 @@
-<view class="container">
-  <view class="header">
-    <input type="text" placeholder="Search Book List" auto-focus />
-    <image src='/images/search.png'></image>
-  </view>
+<view class="container" wx:if='{{showing}}'>
+
+  <view class="header" bind:tap='display'>
+    <view class='box' bind:tap="onActivateSearch">
+     <image src="../../../images/search.png" />
+     <text>搜索书籍</text>
+    </view> 
+  </view> 
+
   <image src="/images/quality.png" class='quality'></image>
+
   <view class="library">
 		<block wx:key='id' wx:for='{{data}}'>
 			<v-library item='{{item}}' class='lib'/>
 		</block>
   </view>
+  
 </view>
+
+<v-search bind:showAll='showAll' />

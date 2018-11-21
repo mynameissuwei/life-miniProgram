@@ -1,5 +1,6 @@
 {
 	"usingComponents":{
-		"v-library":"/components/library-book/index"
+		"v-library":"/components/library-book/index",
+		"v-search":"/components/search/search"
 	}
 }
