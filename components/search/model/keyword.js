@@ -1,7 +1,9 @@
+import http1 from '../../../config1';
+
 const key = 'q'
 const maxLength = 9
 
-class searchModel {  
+class searchModel extends http1{  
 
   getHistory() {
     if(wx.getStorageSync(key) == '') {
@@ -11,7 +13,9 @@ class searchModel {
   }
 
   getHost() {
-
+    return this.getModel({
+      url:'/book/hot_keyword'
+    })
   }
 
   addHistory(value) {

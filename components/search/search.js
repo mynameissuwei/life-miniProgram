@@ -15,7 +15,16 @@ Component({
    * 组件的初始数据
    */
   data: {
-    historyComment:[]
+    historyComment:[],
+    hotComment:[]
+  },
+
+  attached:function() {
+    searchBook.getHost().then((res) => {
+      this.setData({
+        hotComment:res.data.hot
+      })
+    })
   },
 
   /**
@@ -31,6 +40,9 @@ Component({
       this.setData({
         historyComment:wx.getStorageSync('q')
       })
+    },
+    onDelete(event) {
+      console.log(event.detail.text)
     }
   }
 })

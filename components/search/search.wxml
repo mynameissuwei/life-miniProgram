@@ -3,7 +3,7 @@
   <view class="header">
     <view class="search-container">
       <image class="icon" src="images/search.png" />
-      <input placeholder-class='in-bar' placeholder='书籍名' class='bar' auto-focus="true" bind:confirm='onConfirm' />
+      <input placeholder-class='in-bar' placeholder='书籍名' class='bar' auto-focus bind:confirm='onConfirm' />
       <image bind:tap="onDelete" class="cancel-img" src="images/cancel.png" />
     </view>
     <view class='cancel' bind:tap="onCancel">取消</view>
@@ -17,7 +17,7 @@
       </view>
       <view class='tag'>
         <block wx:for='{{historyComment}}' wx:key="">
-          <v-tag item="{{item}}" class='tag'>
+          <v-tag item="{{item}}" class='tag-header'>
             <view slot='after' class='tag-comment'>{{item}}</view>
           </v-tag>
         </block>
@@ -28,6 +28,13 @@
       <view class="title">
         <view class="chunk"></view>
         <text>热门搜索</text>
+      </view>
+      <view class='tag'>
+        <block wx:for='{{hotComment}}' wx:key="">
+          <v-tag item="{{item}}" class='tag-header'>
+            <view slot='after' class='tag-comment'>{{item}}</view>
+          </v-tag>
+        </block>
       </view>
     </view> 
   </view>

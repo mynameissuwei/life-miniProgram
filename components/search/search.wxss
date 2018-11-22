@@ -150,12 +150,21 @@
 .test {
   background-color: #000;
 }
-.tag {
-  margin-right: 15rpx;
-  margin-bottom: 10rpx;
-  border-radius: 15px !important;
+.tag-header {
+  display: inline-flex;
+  margin: 10rpx 10rpx;
+  background-color:white;
+  color: black;
   border:1px solid black;
+  border-radius:50px;
 }
 .tag-comment {
-  padding-left: 30rpx;
+  padding: 10rpx;
 }
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  margin-top:30rpx;
+}
+
