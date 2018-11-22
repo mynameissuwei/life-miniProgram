@@ -150,3 +150,12 @@
 .test {
   background-color: #000;
 }
+.tag {
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+  border-radius: 15px !important;
+  border:1px solid black;
+}
+.tag-comment {
+  padding-left: 30rpx;
+}
