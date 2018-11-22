@@ -9,7 +9,7 @@
     <view class='cancel' bind:tap="onCancel">取消</view>
   </view>
 
-  <view>
+  <view wx:if='{{showComment}}'>
     <view class="history">
       <view class="title">
         <view class="chunk"></view>
@@ -37,6 +37,14 @@
         </block>
       </view>
     </view> 
+  </view>
+
+  <view class='book-list'>
+    <block wx:for='{{searchData}}' wx:key="">
+      <v-library item="{{item}}" class='tag-header'>
+        <view slot='after' class='tag-comment'>{{item}}</view>
+      </v-library>
+    </block>
   </view>
 
 </view>

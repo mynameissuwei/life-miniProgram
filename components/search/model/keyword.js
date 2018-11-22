@@ -18,6 +18,13 @@ class searchModel extends http1{
     })
   }
 
+  search(val) {
+    return this.getModel({
+      url:'/book/search',
+      data:val
+    })
+  }
+
   addHistory(value) {
     const val = this.getHistory()
     const len = val.length

@@ -155,7 +155,6 @@
   margin: 10rpx 10rpx;
   background-color:white;
   color: black;
-  border:1px solid black;
   border-radius:50px;
 }
 .tag-comment {
@@ -167,4 +166,9 @@
   align-items: space-between;
   margin-top:30rpx;
 }
-
+.book-list {
+  margin-top: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

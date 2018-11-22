@@ -7,6 +7,7 @@ Component({
   /**
    * 组件的属性列表
    */
+
   properties: {
 
   },
@@ -16,10 +17,15 @@ Component({
    */
   data: {
     historyComment:[],
-    hotComment:[]
+    hotComment:[],
+    searchData:[],
+    showComment:true
   },
 
   attached:function() {
+    this.setData({
+      historyComment: wx.getStorageSync('q')
+    }),
     searchBook.getHost().then((res) => {
       this.setData({
         hotComment:res.data.hot
@@ -34,15 +40,22 @@ Component({
     onCancel() {
       this.triggerEvent('showAll',{},{})
     },
-    onConfirm(event) {
+    onConfirm(event) { 
       const text = event.detail.value
+      const Sbook = {
+        q:text,
+        summary:1
+      }
       searchBook.addHistory(text)
       this.setData({
-        historyComment:wx.getStorageSync('q')
+        historyComment:wx.getStorageSync('q'),
+        showComment:false
       })
-    },
-    onDelete(event) {
-      console.log(event.detail.text)
+      searchBook.search(Sbook).then((res) => {
+        this.setData({
+          searchData:res.data.books
+        })
+      })
     }
   }
 })
