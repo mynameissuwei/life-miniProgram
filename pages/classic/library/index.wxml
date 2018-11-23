@@ -14,7 +14,7 @@
 			<v-library item='{{item}}' class='lib'/>
 		</block>
   </view>
-  
+
 </view>
 
-<v-search bind:showAll='showAll' wx:if='{{!showing}}'/>
+<v-search more='{{more}}' bind:showAll='showAll' wx:if='{{!showing}}'/>

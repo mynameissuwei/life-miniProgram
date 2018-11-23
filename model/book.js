@@ -4,8 +4,8 @@ class Book extends http1 {
 
   getData() {
     return this.getModel({
-      url: '/book/hot_list',
-    });
+      url: '/book/hot_list'
+    })
   }
 
   getDetail(bid) {
