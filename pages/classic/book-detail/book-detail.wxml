@@ -53,8 +53,12 @@
 
   <view class='post-container' wx:if='{{posting}}'>
     <text class='post-fake' bind:tap='onCancel'>input comment</text>
-    <v-like></v-like>
-    <image src='/images/share.png'/>
+    <view class='button-like'>
+      <v-like></v-like>
+      <v-button open-type='share' class='share-btn'>
+        <image slot='image' src='../../../images/share.png' class='share'/>
+      </v-button>
+    </view>
   </view>
 
   <view wx:if="{{!posting}}" class="posting-container">

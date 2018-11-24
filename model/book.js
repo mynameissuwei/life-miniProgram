@@ -2,6 +2,18 @@ import http1 from '../config1';
 
 class Book extends http1 {
 
+  getMyFavor(success){
+    return this.getModel({
+      url:'/classic/favor'
+    })
+  }
+
+  getBookCount() {
+    return this.getModel({
+      url:'/book/favor/count'
+    })
+  }
+
   getData() {
     return this.getModel({
       url: '/book/hot_list'

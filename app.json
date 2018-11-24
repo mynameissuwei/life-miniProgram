@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/classic/library/index",
     "pages/classic/classic",
+    "pages/classic/library/index",
     "pages/classic/travel/index",
-    "pages/classic/book-detail/book-detail"
+    "pages/classic/book-detail/book-detail",
+    "pages/classic/course/course",
+    "pages/classic/about/about"
   ],
   "window": {
     "navigationBarTitleText": "啦啦啦",

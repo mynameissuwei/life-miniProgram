@@ -5,6 +5,7 @@
     "v-expoise":"/components/expoise/index",
     "v-nav":"/components/nav/index",
     "v-music":"/components/music/index",
-    "v-book":"/components/book/index"
+    "v-book":"/components/book/index",
+    "v-button":"/components/image-button/index"
   }
 }     

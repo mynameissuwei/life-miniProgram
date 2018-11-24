@@ -1,8 +1,8 @@
 /* components/like/index.wxss */
 
 .container image{
-  width: 26rpx;
-  height: 23rpx;
+  width: 40rpx;
+  height: 40rpx;
 }
 .container text {
   line-height: 30rpx;

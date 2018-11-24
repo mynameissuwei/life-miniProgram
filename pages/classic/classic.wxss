@@ -1,4 +1,3 @@
-/* pages/classic/classic.wxss */
 .container{
   display: flex;
   flex-direction: column;
@@ -9,4 +8,19 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+}
+.button-like {
+  display:flex;
+  justify-content: center;
+}
+.share-btn{
+  margin-top:28rpx;
+  margin-left:10rpx;
+}
+.share{
+  width:40rpx;
+  height:40rpx;
+} 
+.button-like v-like view  {
+  margin-top:47rpx;
 }

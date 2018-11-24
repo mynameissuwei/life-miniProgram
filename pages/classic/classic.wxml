@@ -1,7 +1,12 @@
 <!--pages/classic/classic.wxml-->
 <view class='container'>
   <view class='container-header'>
-    <v-like/>
+    <view class='button-like'>
+      <v-like class="like" read-only="{{true}}" like="{{true}}" count="{{classic.fav_nums}}" />
+      <v-button open-type='share' class='share-btn'>
+        <image slot='image' src='../../images/share.png' class='share'/>
+      </v-button>
+    </view>
     <v-expoise index="{{classic.index}}"/>
   </view>
   <v-movie wx:if="{{classic.type === 100?true:false}}" img="{{classic.image}}" title="{{classic.title}}" content="{{classic.content}}"/>

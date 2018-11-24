@@ -1,3 +1,3 @@
-<button open-type='{{openType}}' plain='{{true}}' bind:getuserinfo='onGetUserInfo'>
+<button open-type='{{openType}}' plain='{{true}}' bind:getuserinfo='onGetUserInfo' class='container'>
   <slot name='image'></slot>
 </button>

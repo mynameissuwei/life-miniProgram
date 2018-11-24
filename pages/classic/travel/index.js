@@ -1,4 +1,6 @@
-// pages/classic/travel/index.js
+import Book from "../../../model/book";
+const bookModel = new Book()
+
 Page({
 
   /**
@@ -6,19 +8,35 @@ Page({
    */
   data: {
     hasUserInfo: false,
-    userInfo: null
+    userInfo: null,
+    classics:null,
+    count:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.getUserInfo({
-    //   success:data => {
-    //     console.log(data)
-    //   }
-    // })
+    this.getMyFavor()
+    this.getBookCount()
     this.userAuthorize()
+  },
+
+  getBookCount() {
+    bookModel.getBookCount().then(res => {
+      this.setData({
+        count:res.data.count
+      })
+    })
+  },
+
+  getMyFavor() {
+    bookModel.getMyFavor().then(res => { 
+      console.log(res)
+      this.setData({
+        classics:res.data
+      })
+    })
   },
 
   userInfo(event) {
@@ -48,6 +66,18 @@ Page({
           console.log('err')
         }
       }
+    })
+  },
+
+  about:function() {
+    wx.navigateTo({
+      url:"../about/about"
+    })
+  },
+
+  onStudy:function() {
+    wx.navigateTo({
+      url:'../course/course'
     })
   },
 
