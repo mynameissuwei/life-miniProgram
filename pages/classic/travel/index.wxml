@@ -1,1 +1,23 @@
-<text>travel</text>
+<view class="container">
+  <!-- <open-data type='userAvatarUrl' class='avatar avatar-position'/> -->
+  <v-button open-type='getUserInfo' bind:getuserinfo='userInfo' class='avatar-position' wx:if="{{!hasUserInfo}}">
+    <image slot='image' src='./images/my.png' class='avatar'></image>
+  </v-button>
+  <view class="avatar-container avatar-position" wx:if="{{hasUserInfo}}">
+    <image src="{{userInfo.avatarUrl}}" class="avatar" />
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <image src="images/my@bg.png" class="bg"></image>
+  <view class='about-container'>
+    <view class='about-us'>
+      <image src='./images/about.png'/>
+      <text class='description'>关于我们</text>
+    </view>
+    <view class='about-us'>
+      <text class='description'>喜欢的书</text>
+    </view>
+  </view>
+  <!-- <button open-type='getUserInfo' bind:getuserinfo='getUserInfo'>Button</button> -->
+</view>
+
+<image bind:tap="onStudy" class="study" src="images/study.png"></image> 
